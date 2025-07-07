@@ -13,6 +13,8 @@ const habilidades = ["HTML", "CSS", "JavaScript", "Tailwind", "Astro"];
 const feliz = true;
 const concluido = false;
 const goal = 3;
+
+const habilidadeCor = "navy";
 ---
 
 <html lang="pt-br">
@@ -22,6 +24,16 @@ const goal = 3;
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{tituloPagina}</title>
+		<style define:vars={{habilidadeCor}}>
+			h1 {
+				color: purple;
+				font-size: 4rem;
+			}
+			.habilidades {
+				color: var(--habilidadeCor);
+				font-weight: bold;
+			}
+		</style>
 	</head>
 	<body>
         <a href="/">Home</a>
@@ -38,7 +50,7 @@ const goal = 3;
 		</ul>
 		<p>Minhas habilidades são:</p>
 		<ul>
-			{habilidades.map((habilidades) => <li>{habilidades}</li>)}
+			{habilidades.map((habilidades) => <li class="habilidades">{habilidades}</li>)}
 		</ul>
 		{feliz && <p>Eu estou feliz por estar estudando Astro!</p>}
 		{concluido && <p>Eu terminei o tutorial!</p>}
