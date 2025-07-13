@@ -1,5 +1,9 @@
 ---
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import '/src/styles/global.css'
 
+const tituloPagina = "Meu blog utilizando Astro"
 ---
 
 <html lang="pt-br">
@@ -8,18 +12,17 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{tituloPagina}</title>
 	</head>
 	<body>
-        <a href="/">Home</a>
-        <a href="/about">Sobre</a>
-        <a href="/blog">Blog</a>
-		<h1>Meu Blog Utilizando Astro</h1>
+        <Navigation />
+		<h1>{tituloPagina}</h1>
         <p>Aqui documentarei minha jornada apredendo astro (tradução feita a mão, fica feio escrever em inglês :P)</p>
 		<ul>
 			<li><a href="/src/pages/posts/post-1.md">Post 1</a></li>
 			<li><a href="/src/pages/posts/post-2.md">Post 2</a></li>
 			<li><a href="/src/pages/posts/post-3.md">Post 3</a></li>
 		</ul>
+		<Footer />
 	</body>
 </html>
