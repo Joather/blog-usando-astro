@@ -2,8 +2,7 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '/src/styles/global.css'
-
-const tituloPagina = "Meu blog utilizando Astro"
+const {tituloPagina} = Astro.props;
 ---
 
 <html lang="pt-br">
@@ -15,14 +14,9 @@ const tituloPagina = "Meu blog utilizando Astro"
 		<title>{tituloPagina}</title>
 	</head>
 	<body>
-        <Header />
+		<Header />
 		<h1>{tituloPagina}</h1>
-        <p>Aqui documentarei minha jornada apredendo astro (tradução feita a mão, fica feio escrever em inglês :P)</p>
-		<ul>
-			<li><a href="/src/pages/posts/post-1.md">Post 1</a></li>
-			<li><a href="/src/pages/posts/post-2.md">Post 2</a></li>
-			<li><a href="/src/pages/posts/post-3.md">Post 3</a></li>
-		</ul>
+        <slot />
 		<Footer />
 		<script>
 			import "../scripts/menu.js";
