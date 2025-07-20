@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import BaseLayout from '../layouts/baseLayout.astro';
 import '/src/styles/global.css'
 import { boolean } from 'astro:schema';
 
@@ -44,26 +45,22 @@ const fonteCaixa = "uppercase";
 		</style>
 	</head>
 	<body>
-        <Header />
-		<h1>{tituloPagina}</h1>
-        <p>Algumas informações legais sobre mim:</p>
-		<ul>
-			<li>Meu nome é {identidade.primeiroNome}.</li>
-			<li>Eu vivo no {identidade.pais} e eu trabalho como {identidade.ocupacao}.</li>
-			{identidade.hobbies.length >= 2 &&
-				<li>Dois do meus hobbies: {identidade.hobbies[0]} e {identidade.hobbies[1]}</li>
-			}
-		</ul>
-		<p>Minhas habilidades são:</p>
-		<ul>
-			{habilidades.map((habilidades) => <li class="habilidades">{habilidades}</li>)}
-		</ul>
-		{feliz && <p>Eu estou feliz por estar estudando Astro!</p>}
-		{concluido && <p>Eu terminei o tutorial!</p>}
-		{goal === 3 ?<p>Meu objetivo é terminar em 3 dias.</p> : <p>Meu objetivo não é 3 dias.</p>}
-		<Footer />
-		<script>
-			import "../scripts/menu.js";
-		</script>
+		<BaseLayout tituloPagina={tituloPagina}>
+			<p>Algumas informações legais sobre mim:</p>
+			<ul>
+				<li>Meu nome é {identidade.primeiroNome}.</li>
+				<li>Eu vivo no {identidade.pais} e eu trabalho como {identidade.ocupacao}.</li>
+				{identidade.hobbies.length >= 2 &&
+					<li>Dois do meus hobbies: {identidade.hobbies[0]} e {identidade.hobbies[1]}</li>
+				}
+			</ul>
+			<p>Minhas habilidades são:</p>
+			<ul>
+				{habilidades.map((habilidades) => <li class="habilidades">{habilidades}</li>)}
+			</ul>
+			{feliz && <p>Eu estou feliz por estar estudando Astro!</p>}
+			{concluido && <p>Eu terminei o tutorial!</p>}
+			{goal === 3 ?<p>Meu objetivo é terminar em 3 dias.</p> : <p>Meu objetivo não é 3 dias.</p>}
+		</BaseLayout>
 	</body>
 </html>
