@@ -32,7 +32,9 @@ const fonteCaixa = "uppercase";
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{tituloPagina}</title>
-		<style define:vars={{habilidadeCor, pesoFonte, fonteCaixa}}>
+	</head>
+	<body>
+		<style is:global define:vars={{habilidadeCor, pesoFonte, fonteCaixa}}>
 			h1 {
 				color: purple;
 				font-size: 4rem;
@@ -43,8 +45,6 @@ const fonteCaixa = "uppercase";
 				text-transform: var(--fonteCaixa);
 			}
 		</style>
-	</head>
-	<body>
 		<BaseLayout tituloPagina={tituloPagina}>
 			<p>Algumas informações legais sobre mim:</p>
 			<ul>
