@@ -1,11 +1,13 @@
 ---
-title: 'Minha segunda postagem no Blog'
-pubDate: 2022-07-01
-description: 'Esta é minha segunda postagem no meu novo Blog utilizando Astro.'
-author: 'Estudante de Astro'
-imagem:
-    url: 'https://docs.astro.build/assets/rose.webp'
-    alt: 'O logo do astro em um fundo escuro junto com um contorno rosa.'
-tags: ["astro", "blogging", "learning in public"]
+layout: ../../layouts/MarkdownPostLayout.astro
+title: My Second Blog Post
+author: Astro Learner
+description: "After learning some Astro, I couldn't stop!"
+image:
+  url: "https://docs.astro.build/assets/arc.webp"
+  alt: "The Astro logo on a dark background with a purple gradient arc."
+pubDate: 2022-07-08
+tags: ["astro", "blogging", "learning in public", "successes"]
 ---
-Mais alguns textos utilizando Markdown, para o estudo de Astro
+
+After a successful first week learning Astro, I decided to try some more. I wrote and imported a small component from memory!

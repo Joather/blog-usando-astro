@@ -1,11 +1,13 @@
 ---
-title: 'Minha terceira postagem no Blog'
-pubDate: 2022-07-01
-description: 'Esta é minha terceira postagem no meu novo Blog utilizando Astro.'
-author: 'Estudante de Astro'
-imagem:
-    url: 'https://docs.astro.build/assets/rose.webp'
-    alt: 'O logo do astro em um fundo escuro junto com um contorno rosa.'
-tags: ["astro", "blogging", "learning in public"]
+layout: ../../layouts/MarkdownPostLayout.astro
+title: My Third Blog Post
+author: Astro Learner
+description: "I had some challenges, but asking in the community really helped!"
+image:
+  url: "https://docs.astro.build/assets/rays.webp"
+  alt: "The Astro logo on a dark background with rainbow rays."
+pubDate: 2022-07-15
+tags: ["astro", "learning in public", "setbacks", "community"]
 ---
-[Propagando da galera do Astro para o discord deles](https://astro.build/chat) is really friendly and helpful!
+
+It wasn't always smooth sailing, but I'm enjoying building with Astro. And, the [Discord community](https://astro.build/chat) is really friendly and helpful!
